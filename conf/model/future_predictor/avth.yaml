@@ -1,0 +1,11 @@
+# @package _group_
+
+_target_: models.future_prediction.AVTh
+n_head: 8
+n_layer: 8
+output_len: 1
+inter_dim: 2048
+return_past_too: True
+future_pred_loss:
+  _target_: torch.nn.MSELoss
+avg_last_n: 1
